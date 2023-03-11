@@ -1,0 +1,131 @@
+:root{
+    --green: #008000;
+    --red: #FF0000;
+    --blue: #0000FF;
+    --Burlywood: #DEB887;
+    --Pink: #FFB6C1;
+    --Gold: #DAA520;
+    --Lavender: #E6E6FA;
+    --Grey: #D3D3D3;
+    --Aquamarine: #7fffd4; 
+}
+.Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.01fr 0.02fr 0.05fr 0.07fr 0.09fr 0.07fr 0.05fr;
+    grid-template-areas: 
+    "nav nav"
+    "About About"
+    "Publications Publications"
+    "Awards Awards"
+    "Hobbies Hobbies"
+    "Achivements Experience"
+    "Blogs Blogs"
+    "footer footer"
+    ;
+}
+nav{
+    grid-area: nav;
+    background-color: var(--Grey);
+}
+.a{
+    display: inline-block;
+    margin-right: 5px;
+    padding-top: 2px;
+    padding-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 29px;
+}
+
+#About{
+    background-color: #FFB6C1;
+    grid-area: About;
+}
+
+img{
+    height: 350px;
+    width: 350px;
+    padding: 10px;
+}
+
+.f{
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+#Publications{
+    background-color: #D3D3D3;
+    grid-area: Publications;
+}
+
+.b{
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+
+#Awards{
+    background-color: #DEB887;
+    grid-area: Awards;
+}
+
+.c{
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+#Hobbies{
+    background-color: aquamarine;
+    grid-area: Hobbies;
+}
+
+.d{
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+#Achivements{
+    background-color: coral;
+    grid-area: Achivements;
+    margin-right: 10px;
+}
+
+.e{
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+#Experience{
+    background-color: coral;
+    grid-area: Experience;
+}
+
+.k{
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+}
+
+#Blogs{
+    background-color: darkkhaki;
+    grid-area: Blogs;
+}
+
+  .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+  .footer{
+    background-color: violet;
+    grid-area: footer;
+  }

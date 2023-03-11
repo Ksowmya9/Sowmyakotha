@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Container">
+        <nav>
+            <ol>
+                <li class="a"><a href="#About">About</a></li>
+                <li class="a"><a href="#Publications">Publications</a></li>
+                <li class="a"><a href="#Awards">Awards</a></li>
+                <li class="a"><a href="#Hobbies">Hobbies</a></li>
+                <li class="a"><a href="#Achivements">Achivements</a></li>
+                <li class="a"><a href="#Experience">Experience</a></li>
+                <li class="a"><a href="#Blogs">Blogs</a></li>
+            </ol>
+        </nav>
+
+        <div id="About">
+            <h1>About</h1>
+            <center>
+                <img src="Image\E1.jpg">
+            </center>
+        </div>
+
+        <div class="hat" id="Publications">
+            <h1>Publications</h1>
+            <script>fetch("https://upadhayay.github.io/db.json")
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (db) {
+                        let placeholder = document.querySelector(".hat");
+                        let out = "";
+                        let i = 0;
+                        while (i < db.books.length) {
+                            out += `
+    <div>
+      <p>${db.books[i].title}</p>
+    </div>
+  `;
+                            i++;
+                        }
+
+                        placeholder.innerHTML = out;
+                    });
+            </script>
+            <ul id="Kotha">
+
+                <!-- <li class="f"><a href="">Establishment of an international bureau of meteorology</a></li>
+            <li class="f"><a href="">Review of Albert Fliegner: "On the Thermal Value of Chemical Processes"</a></li>
+            <li class="f"><a href="">Elementary Theory of Brownian Motion</a></li>
+            <li class="f"><a href="">Theoretical Remarks on Brownian Motion</a></li>
+            <li class="f"><a href="">The Principle of Relativity and Its Consequences in Modern Physics</a></li> -->
+            </ul>
+        </div>
+
+        <div id="Awards">
+            <h1>Awards</h1>
+            <ul>
+                <li class="b"><a href="">Copley Medal</a></li>
+                <li class="b"><a href="">Gold Medal of the Royal Astronomical Society</a></li>
+                <li class="b"><a href="">Nobel Prize in Physics</a></li>
+                <li class="b"><a href="">Max Planck Medal </a></li>
+                <li class="b"><a href="">Matteucci Medal</a></li>
+            </ul>
+        </div>
+
+        <div id="Hobbies">
+            <h1>Hobbies</h1>
+            <ul>
+                <li class="c"><a href="">Playing Cards</a></li>
+                <li class="c"><a href="">Building complex structures with blocks</a></li>
+                <li class="c"><a href="">Going for walks around the town</a></li>
+                <li class="c"><a href="">Reading</a></li>
+                <li class="c"><a href="">Experiments</a></li>
+            </ul>
+        </div>
+
+        <div id="Achivements">
+            <h1>Achivements</h1>
+            <ul>
+                <li class="d"><a href="">He asserted the equivalence of mass and energy,
+                        which would lead to the famous formula E=mc2</a></li>
+                <li class="d"><a href="">Einstein showed how to calculate Avogadro's number
+                        and the size of molecules.</a></li>
+                <li class="d"><a href="">In 1917, Einstein published a paper which uses general relativity to
+                        model the behavior of an entire universe. General relativity has spawned some of the
+                        weirdest, and most important results in modern astronomy.</a></li>
+                <li class="d"><a href="">Einstein later published a paper in 1915 called "General Relativity." General
+                        Relativity
+                        took over when Special Relativity started to fail.Controversy started to rise when Einstein
+                        released
+                        his second paper called "General Relativity.</a></li>
+                <li class="d"><a href="">Einstein recognized that there might be a problem with the classical notion of
+                        cause
+                        and effect. Given the peculiar, dual nature of quanta as both waves and particles, it might be
+                        impossible, he warns, to definitively tie effects to their causes.</a></li>
+            </ul>
+        </div>
+
+        <div id="Experience">
+            <h1>Experience</h1>
+            <ul>
+                <li class="e"><a href="">Clerk, Swiss Patent Office, Bern, 1902-1909.</a></li>
+                <li class="e"><a href="">Associate professor of physics, University of Zurich, 1909-1910.</a></li>
+                <li class="e"><a href="">Professor of physics, Swiss Federal Polytechnic Institute,1912-1913.</a></li>
+                <li class="e"><a href="">Director, Kaiser Wilhelm Physical Institution, Berlin, 1914-1933.</a></li>
+                <li class="e"><a href="">Professor of Theoretical Physics, Institute for Advanced Study,
+                        Princeton, 1933-1955.</a></li>
+            </ul>
+        </div>
+
+        <div id="Blogs">
+            <h1>Blogs</h1>
+            <ul>
+                <li class="k"><a href="">https://evernote.com/blog/einsteins-unique-approach-to-thinking/</a></li>
+            </ul>
+        </div>
+
+        <div id="footer">
+            <center>
+                <p>Author: Sowmya Kotha<br>
+                    <a href="mailto:@example.com">sowmyak@example.com</a>
+                </p>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </center>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
